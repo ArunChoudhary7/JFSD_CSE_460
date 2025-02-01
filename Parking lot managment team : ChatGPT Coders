@@ -7,7 +7,6 @@ class Vehicle {
         this.type = type;
     }
 }
-
 class ParkingTicket {
     int ticketID;
     String licensePlate;
