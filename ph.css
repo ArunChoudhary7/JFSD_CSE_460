@@ -1,0 +1,111 @@
+body{
+    background-color: #babab6;
+}
+
+.heading{
+    background-color: rgb(221,221,218);
+    margin: 20px;
+    padding: 1px;
+    font-family: sans-serif;
+    color:rgba(29, 13, 13, 0.801);
+}
+
+h1{
+    margin-left: 10px;
+}
+
+.maindiv{
+    margin: 20px;
+}
+
+.div1{
+    background-color: rgb(53, 122, 175);
+    color: white;
+    padding: 8px;
+}
+.div2{
+    background-color: rgb(54, 134, 185);
+    color: white;
+    padding: 8px;
+}
+
+.div3{
+    background-color: #3293c3;
+    color: white;
+    padding: 8px;
+}
+
+.div4{
+    background-color: #469fcb;
+    color: white;
+    padding: 8px;
+}
+  
+.div5{
+    background-color: #5fadd2;
+    color: white;
+    padding: 8px;
+}
+
+.div6{
+    background-color: #75bada;
+    color: white;
+    padding: 8px;
+}
+
+.div7{
+    background-color: #8dc4df;
+    color: white;
+    padding: 8px;
+}
+
+.div8{
+    background-color: #23ab7e;
+    color: white;
+    padding: 8px;
+}
+
+.div9{
+    background-color: #e7abc1;
+    color: white;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.div10{
+    background-color: #e799b5;
+    color: white;
+    padding: 8px;
+}
+
+.div11{
+    background-color:#e587a7;
+    color: white;
+    padding: 8px;
+}
+
+.div12{
+    background-color: #e2749a;
+    color: white;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.div13{
+    background-color: #e0658a;
+    color: white;
+    padding: 8px;
+}
+
+.div14{
+    background-color: #db5580;
+    color: white;
+    padding: 8px;
+}
+
+.div15{
+    background-color: #da3d75;
+    color: white;
+    padding: 8px;
+    cursor: pointer;
+}
