@@ -1,0 +1,74 @@
+import React, { useEffect, useState } from 'react';
+import './App.css';
+
+const API = 'http://localhost:5000/notes';
+
+function App() {
+  const [notes, setNotes] = useState([]);
+  const [form, setForm] = useState({ title: '', content: '' });
+
+  useEffect(() => {
+    fetchNotes();
+  }, []);
+
+  const fetchNotes = async () => {
+    const res = await fetch(API);
+    const data = await res.json();
+    setNotes(data);
+  };
+
+  const handleChange = e => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async e => {
+    e.preventDefault();
+    const res = await fetch(API, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form),
+    });
+    const data = await res.json();
+    setNotes([...notes, data]);
+    setForm({ title: '', content: '' });
+  };
+
+  const deleteNote = async id => {
+    await fetch(`${API}/${id}`, { method: 'DELETE' });
+    setNotes(notes.filter(note => note._id !== id));
+  };
+
+  return (
+    <div className="App">
+      <h1>Personal Notes</h1>
+      <form onSubmit={handleSubmit}>
+        <input
+          name="title"
+          placeholder="Title"
+          value={form.title}
+          onChange={handleChange}
+          required
+        />
+        <textarea
+          name="content"
+          placeholder="Content"
+          value={form.content}
+          onChange={handleChange}
+          required
+        ></textarea>
+        <button type="submit">Add Note</button>
+      </form>
+      <div className="notes">
+        {notes.map(note => (
+          <div className="note" key={note._id}>
+            <h2>{note.title}</h2>
+            <p>{note.content}</p>
+            <button onClick={() => deleteNote(note._id)}>Delete</button>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default App;
