@@ -1,0 +1,29 @@
+.App {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+}
+
+button {
+  padding: 8px 16px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.notes {
+  margin-top: 20px;
+}
+
+.note {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
